@@ -3,6 +3,7 @@ from tkinter import Tk
 from CircleResultsFrame import CircleResultsFrame
 from ResultsFrame import ResultsFrame
 
+import time
 
 def step_by_step_method(start_x, start_y, end_x, end_y):
     points = []
@@ -98,6 +99,26 @@ def bresenham_circle(radius, center_x, center_y):
         points = put_circle_point(x, y, points, center_x, center_y)
     return points
 
+
+# start = time.time()
+# step_by_step_method(0,0,1000000,1000000)
+# end = time.time()
+# print("Пошаговый алгоритм: " + str(end-start) + " с")
+#
+# start = time.time()
+# dda_method(0,0,1000000,1000000)
+# end = time.time()
+# print("алгоритм ЦДА: " + str(end-start) + " с")
+#
+# start = time.time()
+# bresenham_line(0,0,1000000,1000000)
+# end = time.time()
+# print("алгоритм Брезенхема: " + str(end-start) + " с")
+#
+# start = time.time()
+# bresenham_circle(1000000,0,0)
+# end = time.time()
+# print("алгоритм Брезенхема(окружность): " + str(end-start) + " с")
 
 
 window = Tk()
